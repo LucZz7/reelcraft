@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReelCraft Studio — Turn One Line Into a Scroll-Stopping Reel</title>
+<meta name="description" content="ReelCraft Studio is a free AI reel factory. Type a topic, pick a language and tone, and generate a complete reel script, voiceover, vertical video and captions — right in your browser. No sign-up, no backend.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v4m-3 0h6"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="13" height="12" rx="2"/><path d="m15 10 6-3v10l-6-3"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="8.5" cy="10" r="1.2" fill="currentColor"/><circle cx="12" cy="7.5" r="1.2" fill="currentColor"/><circle cx="15.5" cy="10" r="1.2" fill="currentColor"/><path d="M12 21c-1 0-1.5-.8-1-1.7.6-1 2-2.3 2-3.8a3 3 0 0 0-6 0c0 2.5 2.5 5.5 5 5.5z"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6l-8-4z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-hash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3 7 21M17 3l-2 18M4 8h17M3 16h17"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-wand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 21 15-15-3-3L3 18l3 3z"/><path d="m14 7 3 3M5 6l1-2m12 14 2 1M3 12l-1 1m18-4 1-1"/></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></symbol>
+  </defs>
+</svg>
+
+<div class="orbs"><div class="orb orb-a"></div><div class="orb orb-b"></div><div class="orb orb-c"></div></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><svg><use href="#i-bolt"/></svg></span>
+      <span>Reel<em>Craft</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#templates">Templates</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a href="studio.html" class="btn btn-primary btn-sm">Open Studio <svg><use href="#i-arrow"/></svg></a>
+      <button class="burger" id="burger" aria-label="Open menu"><svg><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#features">Features</a>
+  <a href="#how">How it works</a>
+  <a href="#templates">Templates</a>
+  <a href="#faq">FAQ</a>
+  <a href="studio.html">Open Studio</a>
+</div>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-badge"><span class="dot"></span><svg><use href="#i-bolt"/></svg>100% FREE · NO SIGN-UP · RUNS IN YOUR BROWSER</div>
+      <h1>Turn one line of text into a <span class="grad">scroll-stopping reel.</span></h1>
+      <p class="sub">ReelCraft Studio is your personal AI reel factory. Type a topic in Hindi, Marathi or English — get a full script, voiceover, vertical video and ready-to-post captions in under a minute.</p>
+      <div class="hero-actions">
+        <a href="studio.html" class="btn btn-primary"><svg><use href="#i-wand"/></svg>Create My Reel</a>
+        <a href="#how" class="btn btn-ghost">See how it works</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>3<i>+</i></b><span>Languages supported</span></div>
+        <div class="stat"><b>4<i>x</i></b><span>Tones &amp; templates</span></div>
+        <div class="stat"><b>0<i>₹</i></b><span>Cost. Forever free.</span></div>
+      </div>
+    </div>
+    <div class="phone-wrap">
+      <div class="phone-glow"></div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="notch"></div>
+          <div class="hero-reel" id="heroReel">
+            <div class="hr-count" id="hrCount">1 / 5</div>
+            <div class="hr-tag" id="hrTag">HOOK</div>
+            <div class="hr-text" id="hrText">Stop scrolling. Your next reel is 30 seconds away.</div>
+            <div class="hr-wm">REELCRAFT</div>
+            <div class="hr-bar" id="hrBar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker"><svg><use href="#i-spark"/></svg>Features</div>
+      <h2>Everything you need to publish daily reels</h2>
+      <p>No camera. No editing app. No monthly subscription. Just your idea — and ReelCraft handles the rest.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="glass feat">
+        <div class="feat-ic"><svg><use href="#i-text"/></svg></div>
+        <h3>Smart Script Engine</h3>
+        <p>Hook, value scenes and a CTA — written naturally in Hindi, Marathi or English, matched to your tone: motivational, educational, promotional or funny.</p>
+      </div>
+      <div class="glass feat">
+        <div class="feat-ic"><svg><use href="#i-mic"/></svg></div>
+        <h3>Instant Voiceover</h3>
+        <p>Preview your script as spoken audio with native Hindi and Marathi voices, straight from your browser. Zero recording equipment needed.</p>
+      </div>
+      <div class="glass feat">
+        <div class="feat-ic"><svg><use href="#i-video"/></svg></div>
+        <h3>Vertical Video Studio</h3>
+        <p>Animated 9:16 canvas video with kinetic typography, progress bar, scene counters and four premium visual templates.</p>
+      </div>
+      <div class="glass feat">
+        <div class="feat-ic"><svg><use href="#i-download"/></svg></div>
+        <h3>One-Tap Download</h3>
+        <p>Record the animation directly from the canvas and download a ready-to-upload .webm reel file. Post it anywhere.</p>
+      </div>
+      <div class="glass feat">
+        <div class="feat-ic"><svg><use href="#i-hash"/></svg></div>
+        <h3>Captions &amp; Hashtags</h3>
+        <p>Auto-generated caption plus 15–20 relevant hashtags in your language, with one-tap copy buttons for Instagram.</p>
+      </div>
+      <div class="glass feat">
+        <div class="feat-ic"><svg><use href="#i-shield"/></svg></div>
+        <h3>Private by Design</h3>
+        <p>Everything runs locally in your browser. No servers, no uploads, no API keys — your topics never leave your device.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker"><svg><use href="#i-clock"/></svg>How it works</div>
+      <h2>From idea to published reel in 3 steps</h2>
+      <p>The whole flow takes less than a minute. Seriously.</p>
+    </div>
+    <div class="steps">
+      <div class="glass step">
+        <div class="step-num">01</div>
+        <div class="step-ic"><svg><use href="#i-wand"/></svg></div>
+        <h3>Describe your topic</h3>
+        <p>Type any topic — "ghar baithe business", "fitness tips", "Marathi udyojak" — pick your language, tone and duration.</p>
+      </div>
+      <div class="glass step">
+        <div class="step-num">02</div>
+        <div class="step-ic"><svg><use href="#i-play"/></svg></div>
+        <h3>Preview &amp; perfect</h3>
+        <p>Watch the animated video preview, listen to the AI voiceover, and tweak until it feels right. Change templates in one click.</p>
+      </div>
+      <div class="glass step">
+        <div class="step-num">03</div>
+        <div class="step-ic"><svg><use href="#i-download"/></svg></div>
+        <h3>Download &amp; post</h3>
+        <p>Record the reel as a video file, copy the caption and hashtags, and publish straight to Instagram Reels or YouTube Shorts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="templates">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker"><svg><use href="#i-palette"/></svg>Templates</div>
+      <h2>Four premium looks, zero design skills</h2>
+      <p>Every template is animated live on canvas — pick the vibe that fits your brand.</p>
+    </div>
+    <div class="tpl-grid">
+      <div class="glass tpl">
+        <div class="tpl-preview tpl-br"><span>Bold Red</span></div>
+        <div class="tpl-body"><h3>Bold Red</h3><p>High-energy red streaks on deep black. Built for motivation and offers.</p><a href="studio.html">Use in Studio <svg><use href="#i-arrow"/></svg></a></div>
+      </div>
+      <div class="glass tpl">
+        <div class="tpl-preview tpl-dp"><span>Dark Premium</span></div>
+        <div class="tpl-body"><h3>Dark Premium</h3><p>Cinematic drifting glows. Perfect for luxury, finance and storytelling.</p><a href="studio.html">Use in Studio <svg><use href="#i-arrow"/></svg></a></div>
+      </div>
+      <div class="glass tpl">
+        <div class="tpl-preview tpl-ng"><span>Neon Glow</span></div>
+        <div class="tpl-body"><h3>Neon Glow</h3><p>Pulsing neon orbs and a moving grid. Made for tech, trends and Gen-Z.</p><a href="studio.html">Use in Studio <svg><use href="#i-arrow"/></svg></a></div>
+      </div>
+      <div class="glass tpl">
+        <div class="tpl-preview tpl-mw"><span>Minimal White</span></div>
+        <div class="tpl-body"><h3>Minimal White</h3><p>Clean light canvas with a red accent. Ideal for education and brands.</p><a href="studio.html">Use in Studio <svg><use href="#i-arrow"/></svg></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker"><svg><use href="#i-globe"/></svg>FAQ</div>
+      <h2>Questions, answered</h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="glass faq-item">
+        <button class="faq-q">Is ReelCraft Studio really free?<svg><use href="#i-chev"/></svg></button>
+        <div class="faq-a"><p>Yes. There is no sign-up, no trial and no paid tier. The script engine, voice preview, video rendering and downloads all run locally in your browser using free built-in web technologies.</p></div>
+      </div>
+      <div class="glass faq-item">
+        <button class="faq-q">Do I need to install anything or create an account?<svg><use href="#i-chev"/></svg></button>
+        <div class="faq-a"><p>No. Open the Studio page in Chrome or Edge on your phone or computer and start creating. Your work is never uploaded anywhere.</p></div>
+      </div>
+      <div class="glass faq-item">
+        <button class="faq-q">Which languages are supported?<svg><use href="#i-chev"/></svg></button>
+        <div class="faq-a"><p>Hindi, Marathi and English — for scripts, voiceovers, captions and hashtags. The voiceover automatically picks a Hindi or Marathi voice when your device has one installed.</p></div>
+      </div>
+      <div class="glass faq-item">
+        <button class="faq-q">What video format do I get?<svg><use href="#i-chev"/></svg></button>
+        <div class="faq-a"><p>A vertical 9:16 .webm video file, recorded live from the animation canvas. It uploads directly to Instagram Reels, YouTube Shorts and WhatsApp Status.</p></div>
+      </div>
+      <div class="glass faq-item">
+        <button class="faq-q">Can I use the reels commercially?<svg><use href="#i-chev"/></svg></button>
+        <div class="faq-a"><p>Yes. Everything ReelCraft generates for you — scripts, videos, captions — is yours to use for personal or business content, including paid promotions.</p></div>
+      </div>
+      <div class="glass faq-item">
+        <button class="faq-q">Does it work on mobile?<svg><use href="#i-chev"/></svg></button>
+        <div class="faq-a"><p>Absolutely — the Studio is mobile-first. Generate, preview and download reels right from your phone's browser.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="glass cta-band">
+      <h2>Your next 30 reels are waiting.</h2>
+      <p>Open the Studio, type your first topic, and publish your first AI reel today.</p>
+      <a href="studio.html" class="btn btn-primary"><svg><use href="#i-bolt"/></svg>Launch ReelCraft Studio</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container foot">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><svg><use href="#i-bolt"/></svg></span>
+      <span>Reel<em>Craft</em></span>
+    </a>
+    <div class="foot-links">
+      <a href="studio.html">Studio</a>
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <p>ReelCraft Studio · Crafted for creators · 2026</p>
+  </div>
+</footer>
+
+<div id="autotest-output" style="display:none"></div>
+<script src="js/landing.js"></script>
+</body>
+</html>
