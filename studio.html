@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReelCraft Studio — AI Reel Generator</title>
+<meta name="description" content="Generate a complete Instagram reel from one line of text: script, voiceover, vertical video, captions and hashtags — free, in your browser.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></symbol>
+    <symbol id="i-wand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 21 15-15-3-3L3 18l3 3z"/><path d="m14 7 3 3M5 6l1-2m12 14 2 1M3 12l-1 1m18-4 1-1"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v4m-3 0h6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5z"/></symbol>
+    <symbol id="i-stop" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="6" width="12" height="12" rx="2"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></symbol>
+    <symbol id="i-hash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3 7 21M17 3l-2 18M4 8h17M3 16h17"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-film" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4m0 4h.01"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  </defs>
+</svg>
+
+<div class="orbs"><div class="orb orb-a"></div><div class="orb orb-b"></div><div class="orb orb-c"></div></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><svg><use href="#i-bolt"/></svg></span>
+      <span>Reel<em>Craft</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#templates">Templates</a>
+      <a href="index.html#faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a href="index.html" class="btn btn-ghost btn-sm"><svg><use href="#i-arrow"/></svg> Home</a>
+      <button class="burger" id="burger" aria-label="Open menu"><svg><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#features">Features</a>
+  <a href="index.html#how">How it works</a>
+  <a href="index.html#templates">Templates</a>
+  <a href="index.html#faq">FAQ</a>
+  <a href="index.html">Home</a>
+</div>
+
+<main class="studio">
+  <div class="container">
+    <div class="studio-head">
+      <div class="kicker"><svg><use href="#i-wand"/></svg>AI Reel Factory</div>
+      <h1>Describe it. <em>We craft the reel.</em></h1>
+      <p>Type your topic, choose a language and tone — ReelCraft writes the script, speaks the voiceover, animates the video and prepares your caption pack.</p>
+    </div>
+
+    <div class="studio-grid">
+      <!-- Controls -->
+      <div class="glass panel">
+        <h2><svg><use href="#i-wand"/></svg>Reel Settings</h2>
+        <div class="form-error" id="formError" role="alert"></div>
+        <div class="field">
+          <label for="topic">Topic — kya baat karni hai?</label>
+          <textarea id="topic" maxlength="120" placeholder="e.g. ghar baithe business, fitness tips, Marathi udyojak..."></textarea>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="language">Language</label>
+            <select id="language">
+              <option value="hi">Hindi</option>
+              <option value="mr">Marathi</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="tone">Tone</label>
+            <select id="tone">
+              <option value="motivational">Motivational</option>
+              <option value="educational">Educational</option>
+              <option value="promotional">Promotional</option>
+              <option value="funny">Funny</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="duration">Duration</label>
+            <select id="duration">
+              <option value="15">15 seconds</option>
+              <option value="30" selected>30 seconds</option>
+              <option value="60">60 seconds</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="template">Template</label>
+            <select id="template">
+              <option value="bold-red">Bold Red</option>
+              <option value="dark-premium">Dark Premium</option>
+              <option value="neon-glow">Neon Glow</option>
+              <option value="minimal-white">Minimal White</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-block" id="generateBtn"><svg><use href="#i-bolt"/></svg>Generate Reel</button>
+        <p class="form-note">Tip: changing the template after generating re-renders the video instantly — no need to regenerate the script.</p>
+      </div>
+
+      <!-- Stage + output -->
+      <div>
+        <div class="glass panel stage-card">
+          <h2 style="align-self:flex-start"><svg><use href="#i-film"/></svg>Preview</h2>
+          <div class="stage-phone">
+            <canvas id="reelCanvas" width="1080" height="1920"></canvas>
+          </div>
+          <div class="stage-actions">
+            <button class="btn btn-ghost btn-sm" id="previewBtn" disabled><svg><use href="#i-play"/></svg>Play Preview</button>
+            <button class="btn btn-ghost btn-sm" id="voiceBtn" disabled><svg><use href="#i-mic"/></svg>Play Voiceover</button>
+            <button class="btn btn-primary btn-sm" id="recordBtn" disabled><svg><use href="#i-download"/></svg>Record &amp; Download</button>
+          </div>
+          <div class="rec-status" id="recStatus"><span class="rec-dot"></span><span id="recText">Recording…</span></div>
+          <div class="dl-row" id="dlRow">
+            <a class="btn btn-primary btn-sm" id="dlLink" href="#" download="reelcraft-reel.webm"><svg><use href="#i-download"/></svg>Download Reel (.webm)</a>
+          </div>
+        </div>
+
+        <div class="glass panel" style="margin-top:24px">
+          <div class="tabs" role="tablist">
+            <button class="tab-btn active" data-tab="scriptTab" role="tab"><svg><use href="#i-text"/></svg>Script</button>
+            <button class="tab-btn" data-tab="captionTab" role="tab"><svg><use href="#i-hash"/></svg>Caption &amp; Hashtags</button>
+          </div>
+          <div class="tab-panel active" id="scriptTab">
+            <div id="sceneList"><div class="empty-state"><svg><use href="#i-film"/></svg>Your generated scenes will appear here.<br>Hit "Generate Reel" to start.</div></div>
+          </div>
+          <div class="tab-panel" id="captionTab">
+            <div id="captionWrap"><div class="empty-state"><svg><use href="#i-hash"/></svg>Caption and hashtags will appear here<br>after you generate a reel.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container foot">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><svg><use href="#i-bolt"/></svg></span>
+      <span>Reel<em>Craft</em></span>
+    </a>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#faq">FAQ</a>
+    </div>
+    <p>ReelCraft Studio · Crafted for creators · 2026</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast"><svg><use href="#i-check"/></svg><span id="toastText"></span></div>
+<div id="autotest-output" style="display:none"></div>
+<script src="js/app.js"></script>
+</body>
+</html>
